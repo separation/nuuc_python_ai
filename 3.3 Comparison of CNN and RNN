@@ -1,0 +1,14 @@
+For CNN, many paramters have been tested while the testing accuracy was usually around 50%.
+A more accurate result may be found if more parameter combinations are tested or the structure of CNN is designed better.
+However, I think it is sufficient to show that CNN is not a proper model which naturally suits the problem.
+On the other hand, it's easy for RNN to reach accuracy above 80%, just avoiding some loss functions which should not be used on binary problems.
+
+To determine a sentence is positive or not, it's crucial to consider not only the single words but also the words before and after.
+CNN considers the adjacency of the words, while too much unrelated information is considered as well, which confuses the model.
+RNN makes use of word concurrency in a more condensed way, which only considers the current word and whether the previous sentence is positive or negative.
+It is more similar with how human understands the sentances.
+If a positive word comes after a positive sentence, the overall meaning is positive.
+However, the meaning becomes negative if a positive word follows a negative sentence.
+
+Choosing a proper model is much more important than tuning paramters.
+If a proper model which matches human mind is chosen, it's much easier to find proper parameters.
